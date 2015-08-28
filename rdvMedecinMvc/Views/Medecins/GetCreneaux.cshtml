@@ -1,0 +1,57 @@
+﻿@model IEnumerable<RDVMedecin.DAL.Creneau>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Medecin.Titre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hdebut)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mdebut)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hfin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mfin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Timestamp)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Medecin.Titre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hdebut)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mdebut)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hfin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mfin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Timestamp)
+        </td>
+        @*<td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>*@
+    </tr>
+}
+
+</table>
